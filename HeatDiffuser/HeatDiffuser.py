@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+import os
 
 class HeatDiffuser:
     def __init__(self, initialConditions, length, heatConstant, timeResolution):
@@ -46,6 +47,8 @@ class HeatDiffuser:
             fig, animate, frames=len(self.temperatureHistory), interval=50, blit=True
         )
         if save:
-            ani.save("heatDiffusion.gif", writer="ffmpeg")
+            if not os.path.exists("Media"):
+                os.mkdir("Media")
+            ani.save("Media/heatDiffusion.gif", writer="ffmpeg")
         else:
             plt.show()
