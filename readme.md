@@ -1,5 +1,7 @@
 **Heat Diffusion Simulator**
 
+![](https://raw.githubusercontent.com/thenu-k/HeatDiffuser/main/Media/heatDiffusion.gif)
+
 This programme simulates heat diffusion in a single dimensional rod with Dirilecht boundary conditions using the finite differences method. 
 The heat equation in one dimension is given by:
 
