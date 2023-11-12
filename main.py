@@ -14,5 +14,9 @@ diffuser = HeatDiffuser(
     timeResolution=0.01
 )
 
-diffuser.simulate(10)
-diffuser.plot(save=True)
+diffuser.simulate(
+    timeLimit=10
+)
+diffuser.plot(
+    save=True
+)
