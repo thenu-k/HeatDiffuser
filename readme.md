@@ -1,4 +1,4 @@
-**Heat Diffusion Simulator**
+# Heat Diffusion Simulator
 
 ![](https://raw.githubusercontent.com/thenu-k/HeatDiffuser/main/Media/heatDiffusion.gif)
 
@@ -17,4 +17,17 @@ To ensure stability, the following condition must be satisfied:
 
 $$\frac{\alpha \Delta t}{\Delta x^2} \leq \frac{1}{2}$$
 
+## Usage
+
+Initial conditions are set in the `main.py` file as an array of values. To set constant/boundary conditions make sure to hardcode the values in the initial condition array and then set the necessary constant points:
+    
+```python
+diffuser = HeatDiffuser(
+    initialConditions=initialConditions,
+    constantPoints=[0,99],
+    length=50,
+    heatConstant=1,
+    timeResolution=0.01
+)
+```
 
